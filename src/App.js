@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import Work from "./Pages/Work.js";
 import Onu from "./Pages/Components/Onu.js";
+import Blog from "./Pages/Blog.js";
 import styled, { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
@@ -12,7 +12,7 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 const Container = styled.div`
-  background-color: orange;
+  background-color: #ffe6e6;
   height: 100vh;
 `;
 
@@ -20,6 +20,17 @@ const Ul = styled.ul`
   list-style: none;
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
+  background-color: #293462;
+  height: 8vh;
+`;
+
+const Li = styled.li`
+  text-align: center;
+  color: #ffdeb4;
+  background-color: #d61c4e;
+  border-radius: 3px;
+  width: 3.5vw;
 `;
 
 export default function App() {
@@ -28,16 +39,16 @@ export default function App() {
       <Container>
         <GlobalStyle />
         <Ul>
-          <Link to="Work">
-            <li>Work</li>
+          <Link to="Blog">
+            <Li>Blog</Li>
           </Link>
           <Link to="Onu">
-            <li>Onu</li>
+            <Li>Onu</Li>
           </Link>
         </Ul>
 
         <Routes>
-          <Route path="/" element={<Work />} />
+          <Route path="/" element={<Blog />} />
           <Route path="Onu" element={<Onu />} />
         </Routes>
       </Container>

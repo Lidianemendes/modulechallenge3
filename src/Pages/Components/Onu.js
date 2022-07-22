@@ -11,7 +11,7 @@ const Container = styled.div`
   margin: 4%;
 `;
 const Star = styled.div`
-  padding: 1.6%;
+  padding: 1%;
 `;
 
 const Title = styled.h1`
