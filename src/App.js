@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Onu from "./Pages/Components/Onu.js";
-import Blog from "./Pages/Blog.js";
+import Blog from "./Pages/Components/Blog.js";
 import styled, { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
@@ -48,7 +48,7 @@ export default function App() {
         </Ul>
 
         <Routes>
-          <Route path="/" element={<Blog />} />
+          <Route path="Blog" element={<Blog />} />
           <Route path="Onu" element={<Onu />} />
         </Routes>
       </Container>
